@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО АРЕКО - Шины для любого транспорта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="animated-background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">ООО АРЕКО</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Герой-секция с id="home" -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Шины для любого транспорта</h1>
+                <p>Качественные шины по доступным ценам с доставкой по Красноярску и краю</p>
+                <a href="#contact" class="btn">Связаться с нами</a>
+            </div>
+        </section>
+
+        <!-- Секция "О нас" с id="about" -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>ООО АРЕКО - надежный поставщик шин для всех видов транспорта в Красноярске и Красноярском крае.</p>
+                        <p>Наша миссия - обеспечить наших клиентов качественной резиной по доступным ценам с профессиональным сервисом и быстрой доставкой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция услуг с id="services" -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="legk.webp" alt="Легковые шины">
+                        </div>
+                        <h3>Легковые шины</h3>
+                        <p>Шины для легковых автомобилей всех классов: летние, зимние и всесезонные. Широкий выбор размеров и производителей.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="gruz.png" alt="Грузовые шины">
+                        </div>
+                        <h3>Грузовые шины</h3>
+                        <p>Шины для грузового транспорта: для междугородних перевозок, строительной техники и специального назначения.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="spec.png" alt="Шины для спецтехники">
+                        </div>
+                        <h3>Шины для спецтехники</h3>
+                        <p>Шины для сельскохозяйственной, строительной и другой спецтехники. Высокая износостойкость и надежность.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция контактов с id="contact" -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p><strong>Адрес:</strong> Проспект имени газеты Красноярский Рабочий 150 стр. 46, Красноярск</p>
+                        <p><strong>Телефоны:</strong></p>
+                        <p>+7 913 195-08-60</p>
+                        <p>+7 923 363-73-00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ООО АРЕКО. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script>
+        // Плавная прокрутка для старых браузеров
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
